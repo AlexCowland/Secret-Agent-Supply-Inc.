@@ -4,7 +4,7 @@ html {
 }
 
 .container {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -73,9 +73,13 @@ nav {
   color: #fff;
 }
 
-nav .container {
+.desktop-nav {
   display: flex;
   justify-content: space-between;
+}
+
+.hidden {
+  display: none;
 }
 
 /*Shop*/
@@ -99,7 +103,7 @@ nav .container {
 }
 
 .shop .item img {
-  max-width: 60%;
+  max-width: 8rem;
 }
 
 .shop .item span {
@@ -145,4 +149,24 @@ footer {
   color: white;
   display: flex;
   align-items: center;
+}
+
+/*Media queries*/
+@media screen and (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .shop .item {
+    width: 47%;
+  }
+
+  .shop .item:nth-child(3) {
+    display: none;
+  }
 }
